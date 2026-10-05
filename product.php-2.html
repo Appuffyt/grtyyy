@@ -1,0 +1,224 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo New wallet </title>
+    <!-- Bootstrap 5 -->
+    <link href="npm/bootstrap%405.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <style>
+        @import url('css2');
+        
+        body { font-family: 'Poppins', sans-serif; background: #f8f9fc; padding-bottom: 100px; margin: 0; }
+
+        /* App-style Navbar */
+        .custom-app-nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.03); }
+        .back-btn { background: #f0f4f8; color: #2d3748; width: 38px; height: 38px; display: flex; align-items: center; justify-content: center; border-radius: 50%; text-decoration: none; transition: all 0.3s; }
+        .back-btn:hover { background: #e2e8f0; color: #ff416c; }
+
+        /* Carousel */
+        #pSlider { background: #fff; padding-bottom: 30px; }
+        .carousel-item img { width: 100%; height: 420px; object-fit: contain; padding: 20px; }
+        .carousel-control-prev-icon, .carousel-control-next-icon { background-color: rgba(0,0,0,0.3); border-radius: 50%; padding: 20px; }
+
+        /* Product Content */
+        .product-content { padding: 30px 25px; background: #fff; border-radius: 35px 35px 0 0; margin-top: -30px; position: relative; z-index: 10; box-shadow: 0 -15px 30px rgba(0,0,0,0.04); }
+        .price-text { font-size: 1.9rem; font-weight: 800; color: #1a202c; }
+        .mrp-text { font-size: 1rem; color: #a0aec0; text-decoration: line-through; }
+        .off-badge { background: linear-gradient(135deg, #ff416c, #ff4b2b); color: #fff; font-size: 0.8rem; font-weight: 700; padding: 6px 14px; border-radius: 50px; }
+        .product-title { font-size: 1.45rem; font-weight: 700; color: #2d3748; line-height: 1.4; margin-top: 15px; }
+
+        /* Variant & Size Styling (Screenshot Match) */
+        .variant-container { display: flex; gap: 12px; overflow-x: auto; padding-bottom: 5px; scrollbar-width: none; }
+        .variant-container::-webkit-scrollbar { display: none; }
+        .variant-box { width: 75px; height: 75px; flex-shrink: 0; border-radius: 12px; border: 2px solid #edf2f7; padding: 4px; transition: 0.3s; }
+        .variant-box img { width: 100%; height: 100%; object-fit: contain; border-radius: 8px; background: #f8fafc; }
+        .variant-box.active { border-color: #ff416c; box-shadow: 0 4px 10px rgba(255, 65, 108, 0.2); }
+        
+        .size-container { display: flex; flex-wrap: wrap; gap: 10px; }
+        .size-pill input { display: none; }
+        .size-box { border: 2px solid #edf2f7; border-radius: 10px; padding: 8px 18px; font-weight: 700; color: #4a5568; cursor: pointer; transition: 0.3s; display: inline-block; background: #fff; }
+        .size-pill input:checked + .size-box { border-color: #ff416c; background: #fff0f3; color: #ff416c; box-shadow: 0 4px 10px rgba(255, 65, 108, 0.15); }
+
+        /* Description Show More */
+        .desc-text { color: #718096; font-size: 0.95rem; line-height: 1.7; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; transition: 0.3s; }
+        .desc-text.expanded { -webkit-line-clamp: unset; }
+        .show-more-btn { color: #ff416c; font-weight: 700; font-size: 0.9rem; cursor: pointer; display: none; margin-top: 5px; }
+
+        /* Bottom Buttons */
+        .fixed-bottom-actions { position: fixed; bottom: 0; left: 0; right: 0; background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(15px); padding: 15px 20px 20px; box-shadow: 0 -10px 30px rgba(0,0,0,0.08); border-radius: 28px 28px 0 0; z-index: 2000; display: flex; gap: 15px; }
+        .btn-add-cart { background: #f0f4f8; color: #2d3748; width: 50%; padding: 15px; border-radius: 16px; font-weight: 700; font-size: 1rem; border:none; }
+        .btn-buy-now { background: linear-gradient(135deg, #00b09b, #96c93d); color: #fff !important; border: none; width: 100%; padding: 15px; border-radius: 16px; font-weight: 700; font-size: 1rem; box-shadow: 0 8px 20px rgba(0, 176, 155, 0.3); }
+
+        #cart-toast { position: fixed; top: 20px; left: 50%; transform: translate(-50%, -100px); background: linear-gradient(135deg, #1b7443, #2ecc71); color: #fff; padding: 12px 30px; border-radius: 50px; font-weight: 600; font-size: 0.95rem; box-shadow: 0 10px 25px rgba(46, 204, 113, 0.4); z-index: 5000; opacity: 0; transition: all 0.5s; display: flex; align-items: center; gap: 8px; }
+        #cart-toast.show { transform: translate(-50%, 0); opacity: 1; }
+        .wish-btn { background: #fdfdfd; border: 1px solid #f0f4f8; border-radius: 50%; width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,0.05); transition: 0.3s; outline: none; }
+        
+        .recom-card { border: 1px solid #f0f4f8; border-radius: 16px; background: #fff; transition: all 0.3s ease; padding: 12px; }
+    </style>
+</head>
+<body>
+
+<div id="cart-toast"><i class="fas fa-check-circle"></i> Item added to cart!</div>
+
+<!-- 1. Header with Wishlist -->
+<div class="custom-app-nav">
+    <a href="index.php.html" class="back-btn"><i class="fas fa-arrow-left"></i></a>
+    <h6 class="m-0 fw-bold text-dark">Product Detail</h6>
+    <form action="" method="POST" class="m-0">
+        <input type="hidden" name="product_id" value="11">
+        <button type="submit" name="toggle_wishlist" class="wish-btn">
+            <i class="far fa-heart text-muted" style="font-size: 1.2rem;"></i>
+        </button>
+    </form>
+</div>
+
+<!-- 2. Image Slider (Carousel) -->
+<div id="pSlider" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active text-center">
+            <img src="assets/images/1773840713_images%20%283%29.jpeg" alt="Main Product">
+        </div>
+            </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#pSlider" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+    <button class="carousel-control-next" type="button" data-bs-target="#pSlider" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+</div>
+
+<!-- 3. Info Section -->
+<div class="product-content">
+    <div class="d-flex justify-content-between align-items-center">
+        <div>
+            <span class="price-text">₹500</span>
+                            <span class="mrp-text ms-2">₹1000.00</span>
+                    </div>
+        <div class="off-badge">50% OFF</div>    </div>
+    
+    <h1 class="product-title">Demo New wallet </h1>
+    <div class="text-warning small mb-3">
+        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i> 
+        <span class="text-muted ms-1">(499 Reviews)</span>
+    </div>
+
+    <!-- ===== DYNAMIC RELATED VARIANTS (Thumbnails) ===== -->
+    
+    <!-- ===== DYNAMIC SIZE SELECTOR ===== -->
+    
+    <!-- ===== DESCRIPTION WITH SHOW MORE ===== -->
+    <h6 class="fw-bold mt-4 mb-2 text-dark">Product Details</h6>
+    <div class="desc-container">
+        <p class="desc-text" id="prodDesc">New wallet </p>
+        <span class="show-more-btn" id="showMoreBtn" onclick="toggleDesc()">+ Show More</span>
+    </div>
+</div>
+
+<!-- 4. Recommended Section (Default Logic Maintained) -->
+<div class="container-fluid py-4" style="background: #f8f9fc;">
+    <h6 class="fw-bold mb-3 ms-1 text-dark" style="font-size: 1.1rem;">Recommended for You</h6>
+    <div class="row g-3">
+                <div class="col-6 col-md-3">
+            <a href="product.php-5.html?id=8" class="text-decoration-none text-center d-block recom-card shadow-sm">
+                <img src="assets/images/1773840569_images.jpeg" style="height:120px; object-fit:contain; mix-blend-mode: multiply;" class="w-100 mb-2">
+                <h6 class="small fw-bold text-dark text-truncate mb-1">Demo Shoes </h6>
+                <span class="text-dark small fw-bold">₹300</span>
+            </a>
+        </div>
+                <div class="col-6 col-md-3">
+            <a href="product.php-4.html?id=9" class="text-decoration-none text-center d-block recom-card shadow-sm">
+                <img src="assets/images/1773840610_images%20%281%29.jpeg" style="height:120px; object-fit:contain; mix-blend-mode: multiply;" class="w-100 mb-2">
+                <h6 class="small fw-bold text-dark text-truncate mb-1">Demo new Shoes </h6>
+                <span class="text-dark small fw-bold">₹2,000</span>
+            </a>
+        </div>
+                <div class="col-6 col-md-3">
+            <a href="product.php-3.html?id=10" class="text-decoration-none text-center d-block recom-card shadow-sm">
+                <img src="assets/images/1773840664_images%20%282%29.jpeg" style="height:120px; object-fit:contain; mix-blend-mode: multiply;" class="w-100 mb-2">
+                <h6 class="small fw-bold text-dark text-truncate mb-1">Demo wallet </h6>
+                <span class="text-dark small fw-bold">₹200</span>
+            </a>
+        </div>
+                <div class="col-6 col-md-3">
+            <a href="product.php-1.html?id=12" class="text-decoration-none text-center d-block recom-card shadow-sm">
+                <img src="assets/images/1773840756_images.jpg" style="height:120px; object-fit:contain; mix-blend-mode: multiply;" class="w-100 mb-2">
+                <h6 class="small fw-bold text-dark text-truncate mb-1">Demo Shirt </h6>
+                <span class="text-dark small fw-bold">₹4,000</span>
+            </a>
+        </div>
+            </div>
+</div>
+
+<!-- 5. Floating Bottom Buttons -->
+<div class="fixed-bottom-actions">
+    <button type="button" onclick="addAjax(11)" class="btn-add-cart d-flex justify-content-center align-items-center gap-2">
+        <i class="fas fa-shopping-bag"></i> ADD TO CART
+    </button>
+    
+    <form action="cart.php" method="POST" class="w-50 m-0" id="buyNowForm">
+        <input type="hidden" name="product_id" value="11">
+        <input type="hidden" name="action" value="add">
+        <!-- Hidden input to capture size -->
+        <input type="hidden" name="size" id="hiddenSizeInput" value="">
+        
+        <button type="submit" name="buy_now" onclick="setFormSize()" class="btn-buy-now d-flex justify-content-center align-items-center gap-2">
+            <i class="fas fa-bolt text-warning"></i> BUY NOW
+        </button>
+    </form>
+</div>
+
+<!-- Scripts -->
+<script src="npm/bootstrap%405.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+// --- Description Show More Logic ---
+document.addEventListener("DOMContentLoaded", function() {
+    let desc = document.getElementById("prodDesc");
+    let btn = document.getElementById("showMoreBtn");
+    // If text exceeds 4 lines (approx 90px height), show button
+    if(desc.scrollHeight > desc.clientHeight) {
+        btn.style.display = "inline-block";
+    }
+});
+
+function toggleDesc() {
+    let desc = document.getElementById("prodDesc");
+    let btn = document.getElementById("showMoreBtn");
+    desc.classList.toggle("expanded");
+    if(desc.classList.contains("expanded")) {
+        btn.innerHTML = "- Show Less";
+    } else {
+        btn.innerHTML = "+ Show More";
+    }
+}
+
+// --- Cart Logic Updates (Captures Size if exists) ---
+function getSelectedSize() {
+    let sizeInput = document.querySelector('input[name="selected_size"]:checked');
+    return sizeInput ? sizeInput.value : '';
+}
+
+function setFormSize() {
+    document.getElementById('hiddenSizeInput').value = getSelectedSize();
+}
+
+function addAjax(pid) {
+    let fd = new FormData(); 
+    fd.append('product_id', pid); 
+    fd.append('action', 'add'); 
+    fd.append('ajax', '1');
+    fd.append('size', getSelectedSize()); // Size attached to form data
+    
+    fetch('cart.php', { method: 'POST', body: fd })
+    .then(r => r.text())
+    .then(res => {
+        if(res.includes("added")) {
+            let t = document.getElementById('cart-toast'); 
+            t.classList.add('show'); 
+            setTimeout(() => { t.classList.remove('show'); }, 2500);
+        }
+    });
+}
+</script>
+</body>
+  </html>

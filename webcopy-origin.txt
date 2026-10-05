@@ -1,0 +1,164 @@
+Uri: https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css
+File Name: C:\Downloaded Web Sites\demoo.work.gd\npm\bootstrap@5.3.0\dist\css\bootstrap.min.css
+Content Type: text/css
+
+Uri: https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js
+File Name: C:\Downloaded Web Sites\demoo.work.gd\npm\bootstrap@5.3.0\dist\js\bootstrap.bundle.min.js
+Content Type: application/javascript
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css
+File Name: C:\Downloaded Web Sites\demoo.work.gd\ajax\libs\font-awesome\6.0.0\css\all.min.css
+Content Type: text/css
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.ttf
+File Name: C:\Downloaded Web Sites\demoo.work.gd\ajax\libs\font-awesome\6.0.0\webfonts\fa-brands-400.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-brands-400.woff2
+File Name: C:\Downloaded Web Sites\demoo.work.gd\ajax\libs\font-awesome\6.0.0\webfonts\fa-brands-400.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-regular-400.ttf
+File Name: C:\Downloaded Web Sites\demoo.work.gd\ajax\libs\font-awesome\6.0.0\webfonts\fa-regular-400.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-regular-400.woff2
+File Name: C:\Downloaded Web Sites\demoo.work.gd\ajax\libs\font-awesome\6.0.0\webfonts\fa-regular-400.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.ttf
+File Name: C:\Downloaded Web Sites\demoo.work.gd\ajax\libs\font-awesome\6.0.0\webfonts\fa-solid-900.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-solid-900.woff2
+File Name: C:\Downloaded Web Sites\demoo.work.gd\ajax\libs\font-awesome\6.0.0\webfonts\fa-solid-900.woff2
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-v4compatibility.ttf
+File Name: C:\Downloaded Web Sites\demoo.work.gd\ajax\libs\font-awesome\6.0.0\webfonts\fa-v4compatibility.ttf
+Content Type: application/octet-stream
+
+Uri: https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/webfonts/fa-v4compatibility.woff2
+File Name: C:\Downloaded Web Sites\demoo.work.gd\ajax\libs\font-awesome\6.0.0\webfonts\fa-v4compatibility.woff2
+Content Type: application/octet-stream
+
+Uri: https://demoo.work.gd/
+File Name: C:\Downloaded Web Sites\demoo.work.gd\index.htm
+Content Type: text/html
+
+Uri: https://demoo.work.gd/assets/images/1773840569_images.jpeg
+File Name: C:\Downloaded Web Sites\demoo.work.gd\assets\images\1773840569_images.jpeg
+Content Type: image/jpeg
+
+Uri: https://demoo.work.gd/assets/images/1773840610_images (1).jpeg
+File Name: C:\Downloaded Web Sites\demoo.work.gd\assets\images\1773840610_images (1).jpeg
+Content Type: image/jpeg
+
+Uri: https://demoo.work.gd/assets/images/1773840664_images (2).jpeg
+File Name: C:\Downloaded Web Sites\demoo.work.gd\assets\images\1773840664_images (2).jpeg
+Content Type: image/jpeg
+
+Uri: https://demoo.work.gd/assets/images/1773840713_images (3).jpeg
+File Name: C:\Downloaded Web Sites\demoo.work.gd\assets\images\1773840713_images (3).jpeg
+Content Type: image/jpeg
+
+Uri: https://demoo.work.gd/assets/images/1773840756_images.jpg
+File Name: C:\Downloaded Web Sites\demoo.work.gd\assets\images\1773840756_images.jpg
+Content Type: image/jpeg
+
+Uri: https://demoo.work.gd/assets/images/1774160924_images (4).jpeg
+File Name: C:\Downloaded Web Sites\demoo.work.gd\assets\images\1774160924_images (4).jpeg
+Content Type: image/jpeg
+
+Uri: https://demoo.work.gd/assets/images/1774162829_IMG-20260322-WA0000.jpg
+File Name: C:\Downloaded Web Sites\demoo.work.gd\assets\images\1774162829_IMG-20260322-WA0000.jpg
+Content Type: image/jpeg
+
+Uri: https://demoo.work.gd/assets/images/4a938048-26c8-443f-b3e2-cdca7e59ded5.png
+File Name: C:\Downloaded Web Sites\demoo.work.gd\assets\images\4a938048-26c8-443f-b3e2-cdca7e59ded5.png
+Content Type: image/png
+
+Uri: https://demoo.work.gd/assets/images/7f0de74c-3fb9-41fb-afd0-10991dd3e7fa.png
+File Name: C:\Downloaded Web Sites\demoo.work.gd\assets\images\7f0de74c-3fb9-41fb-afd0-10991dd3e7fa.png
+Content Type: image/png
+
+Uri: https://demoo.work.gd/assets/images/aa92c544-4c76-410a-9df7-565030f9fc89.png
+File Name: C:\Downloaded Web Sites\demoo.work.gd\assets\images\aa92c544-4c76-410a-9df7-565030f9fc89.png
+Content Type: image/png
+
+Uri: https://demoo.work.gd/assets/js/script.js
+File Name: C:\Downloaded Web Sites\demoo.work.gd\assets\js\script.js
+Content Type: application/javascript
+
+Uri: https://demoo.work.gd/cart.php
+File Name: C:\Downloaded Web Sites\demoo.work.gd\cart.php.html
+Content Type: text/html
+
+Uri: https://demoo.work.gd/index.php
+File Name: C:\Downloaded Web Sites\demoo.work.gd\index.php.html
+Content Type: text/html
+
+Uri: https://demoo.work.gd/login.php
+File Name: C:\Downloaded Web Sites\demoo.work.gd\login.php.html
+Content Type: text/html
+
+Uri: https://demoo.work.gd/product.php?id=10
+File Name: C:\Downloaded Web Sites\demoo.work.gd\product.php-3.html
+Content Type: text/html
+
+Uri: https://demoo.work.gd/product.php?id=11
+File Name: C:\Downloaded Web Sites\demoo.work.gd\product.php-2.html
+Content Type: text/html
+
+Uri: https://demoo.work.gd/product.php?id=12
+File Name: C:\Downloaded Web Sites\demoo.work.gd\product.php-1.html
+Content Type: text/html
+
+Uri: https://demoo.work.gd/product.php?id=13
+File Name: C:\Downloaded Web Sites\demoo.work.gd\product.php.html
+Content Type: text/html
+
+Uri: https://demoo.work.gd/product.php?id=8
+File Name: C:\Downloaded Web Sites\demoo.work.gd\product.php-5.html
+Content Type: text/html
+
+Uri: https://demoo.work.gd/product.php?id=9
+File Name: C:\Downloaded Web Sites\demoo.work.gd\product.php-4.html
+Content Type: text/html
+
+Uri: https://demoo.work.gd/register.php
+File Name: C:\Downloaded Web Sites\demoo.work.gd\register.php.html
+Content Type: text/html
+
+Uri: https://demoo.work.gd/reset-password.php
+File Name: C:\Downloaded Web Sites\demoo.work.gd\reset-password.php.html
+Content Type: text/html
+
+Uri: https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap
+File Name: C:\Downloaded Web Sites\demoo.work.gd\css2
+Content Type: text/css
+
+Uri: https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7V1s.ttf
+File Name: C:\Downloaded Web Sites\demoo.work.gd\s\poppins\v24\pxiByp8kv8JHgFVrLCz7V1s.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDD4V1s.ttf
+File Name: C:\Downloaded Web Sites\demoo.work.gd\s\poppins\v24\pxiByp8kv8JHgFVrLDD4V1s.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDz8V1s.ttf
+File Name: C:\Downloaded Web Sites\demoo.work.gd\s\poppins\v24\pxiByp8kv8JHgFVrLDz8V1s.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1s.ttf
+File Name: C:\Downloaded Web Sites\demoo.work.gd\s\poppins\v24\pxiByp8kv8JHgFVrLEj6V1s.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9V1s.ttf
+File Name: C:\Downloaded Web Sites\demoo.work.gd\s\poppins\v24\pxiByp8kv8JHgFVrLGT9V1s.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJA.ttf
+File Name: C:\Downloaded Web Sites\demoo.work.gd\s\poppins\v24\pxiEyp8kv8JHgFVrFJA.ttf
+Content Type: font/ttf
+
